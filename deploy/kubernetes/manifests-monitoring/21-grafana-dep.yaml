@@ -21,6 +21,10 @@ spec:
       containers:
       - image: grafana/grafana:7.5.5
         name: grafana-core
+        ports:
+        - name: web
+          containerPort: 9091
+          protocol: TCP
         imagePullPolicy: IfNotPresent
         # env:
         resources:
